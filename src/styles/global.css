@@ -1,0 +1,13 @@
+:root {
+  --color-cream: #FFF8F0;
+  --color-pink: #F7D6E0;
+  --color-navy: #1E2A44;
+  --color-gold: #D4A373;
+  --color-text: #2B2B2B;
+}
+
+body {
+  background-color: var(--color-cream);
+  color: var(--color-text);
+  font-family: Inter, sans-serif;
+}
