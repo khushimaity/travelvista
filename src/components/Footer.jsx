@@ -1,7 +1,9 @@
 function Footer() {
   return (
-    <footer className="px-8 lg:px-20 pb-10">
-      <div className="max-w-7xl mx-auto border-t border-gray-300 pt-12">
+        <footer
+          id="contact"
+          className="px-8 lg:px-20 pb-10"
+        >      <div className="max-w-7xl mx-auto border-t border-gray-300 pt-12">
 
         <div className="grid md:grid-cols-4 gap-10">
 
@@ -22,10 +24,21 @@ function Footer() {
             </h4>
 
             <ul className="space-y-2 text-gray-600">
-              <li>About</li>
-              <li>Destinations</li>
-              <li>Packages</li>
-              <li>Contact</li>
+              <li className="hover:text-[#D4A373] transition cursor-pointer">
+  About
+              </li>
+              
+              <li className="hover:text-[#D4A373] transition cursor-pointer">
+  Destinations
+              </li>
+              
+              <li className="hover:text-[#D4A373] transition cursor-pointer">
+  Packages
+              </li>
+              
+              <li className="hover:text-[#D4A373] transition cursor-pointer">
+                Contact
+              </li>
             </ul>
           </div>
 

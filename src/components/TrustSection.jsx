@@ -1,3 +1,5 @@
+import { motion } from "framer-motion";
+
 function TrustSection() {
   const stats = [
     {
@@ -26,8 +28,15 @@ function TrustSection() {
     <section className="py-32 px-8 lg:px-20">
       <div className="max-w-7xl mx-auto">
 
-        <div className="text-center">
-          <p className="uppercase tracking-[0.35em] text-[#D4A373] text-sm">
+           <motion.div
+             initial={{ opacity: 0, y: 40 }}
+             whileInView={{ opacity: 1, y: 0 }}
+             viewport={{ once: false, amount: 0.3 }}
+             transition={{ duration: 0.8 }}
+             className="text-center"
+           >          
+           
+           <p className="uppercase tracking-[0.35em] text-[#D4A373] text-sm">
             Why Travelers Love Us
           </p>
 
@@ -38,14 +47,23 @@ function TrustSection() {
           <p className="mt-5 text-gray-600 max-w-2xl mx-auto">
             Thousands of travelers trust TravelVista to create unforgettable journeys.
           </p>
-        </div>
+        </motion.div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mt-16">
-          {stats.map((item) => (
-            <div
+          {stats.map((item, index) => (            
+            
+            <motion.div
               key={item.title}
+              initial={{ opacity: 0, y: 50, scale: 0.95 }}
+              whileInView={{ opacity: 1, y: 0, scale: 1 }}
+              viewport={{ once: false, amount: 0.2 }}
+              transition={{
+                duration: 0.6,
+                delay: index * 0.15,
+              }}
               className="bg-white rounded-[30px] p-8 shadow-lg hover:-translate-y-2 transition duration-300"
             >
+            
               <h3 className="text-5xl font-bold text-[#1E2A44]">
                 {item.number}
               </h3>
@@ -57,7 +75,7 @@ function TrustSection() {
               <p className="mt-3 text-gray-600">
                 {item.description}
               </p>
-            </div>
+            </motion.div>
           ))}
         </div>
 

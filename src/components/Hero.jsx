@@ -31,9 +31,20 @@ function Hero() {
               designed for modern explorers.
             </p>
 
-            <button className="mt-8 px-8 py-4 rounded-full bg-[#1E2A44] text-white hover:scale-105 transition">
-              Explore Destinations
-            </button>
+            <button
+                onClick={() =>
+                  document
+                    .getElementById("destinations")
+                    ?.scrollIntoView({
+                      behavior: "smooth",
+                    })
+                }
+                className="mt-8 px-8 py-4 rounded-full bg-[#1E2A44] text-white hover:scale-105 transition"
+              >
+                Explore Destinations
+              </button>
+              
+              
           </div>
 
           {/* RIGHT SIDE */}
